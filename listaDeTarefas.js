@@ -15,6 +15,7 @@
     tarefa.innerHTML = conteudo
 
     tarefa.appendChild(BotaoConclui())
+    tarefa.appendChild(BotaoDeleta())
     lista.appendChild(tarefa)
     input.value = " "
 
@@ -46,4 +47,25 @@ const concluirTarefa = (evento) => {
 
     tarefaCompleta.classList.toggle('done')
 }
+
+const BotaoDeleta = () => {
+    const botaoDeleta = document.createElement('button')
+
+    botaoDeleta.innerHTML = 'deletar'
+    botaoDeleta.addEventListener('click', deletarTarefa)
+
+    return botaoDeleta
+
+}
+const deletarTarefa = (evento) => {
+    const botaoDeleta = evento.target
+
+    const tarefaCompleta = botaoDeleta.parentElement
+
+    tarefaCompleta.remove()
+
+    return botaoDeleta
+}    
+
+
 })()
