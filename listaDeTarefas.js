@@ -1,4 +1,4 @@
-
+(() => {
     
     const criarTarefa = (evento) => {
 
@@ -46,3 +46,4 @@ const concluirTarefa = (evento) => {
 
     tarefaCompleta.classList.toggle('done')
 }
+})()
